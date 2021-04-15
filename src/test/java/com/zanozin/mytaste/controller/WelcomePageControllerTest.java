@@ -15,17 +15,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(SimpleController.class)
-public class SimpleControllerTest {
+@WebMvcTest(WelcomePageController.class)
+public class WelcomePageControllerTest {
 
     @Setter(onMethod_ = {@Autowired})
     private MockMvc mockMvc;
 
     @Test
     public void testSimple_GetOk() throws Exception {
-        mockMvc.perform(get("/simple"))
+        mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("simple"))
-                .andExpect(content().string(containsString("This is the simple page")));
+                .andExpect(view().name("welcome"))
+                .andExpect(content().string(containsString("My Taste")));
     }
 }
