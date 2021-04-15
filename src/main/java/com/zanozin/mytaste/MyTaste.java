@@ -1,13 +1,13 @@
-package com.zanozin.sb;
+package com.zanozin.mytaste;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SbApplication {
+public class MyTaste {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SbApplication.class, args);
+		SpringApplication.run(MyTaste.class, args);
 	}
 
 }

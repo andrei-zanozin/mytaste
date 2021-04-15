@@ -1,4 +1,4 @@
-package com.zanozin.sb.controller;
+package com.zanozin.mytaste.controller;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;

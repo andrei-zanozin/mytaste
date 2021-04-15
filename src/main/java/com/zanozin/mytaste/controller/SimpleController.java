@@ -1,4 +1,4 @@
-package com.zanozin.sb.controller;
+package com.zanozin.mytaste.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

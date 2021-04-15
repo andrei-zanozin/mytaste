@@ -1,10 +1,10 @@
-package com.zanozin.sb;
+package com.zanozin.mytaste;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SbApplicationTests {
+class MyTasteTests {
 
 	@Test
 	void contextLoads() {

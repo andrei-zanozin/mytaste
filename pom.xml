@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.zanozin</groupId>
-	<artifactId>sb</artifactId>
+	<artifactId>mytaste</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sb</name>
-	<description>Training project on Spring Boot</description>
+	<name>mytaste</name>
+	<description>The collection of my favorite dishes.</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
