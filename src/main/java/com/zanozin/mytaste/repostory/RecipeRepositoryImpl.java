@@ -3,10 +3,12 @@ package com.zanozin.mytaste.repostory;
 import com.zanozin.mytaste.model.entity.Ingredient;
 import com.zanozin.mytaste.model.entity.Product;
 import com.zanozin.mytaste.model.entity.Recipe;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class RecipeRepositoryImpl implements RecipeRepository {
 
     @Override
