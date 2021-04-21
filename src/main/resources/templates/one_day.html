@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>One day menu</title>
+    <style type="text/css">
+        .item {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<center>
+<div>
+    <a href="/" style="text-decoration: none; margin-right: 10px;"><- back</a>
+    <a href="/one_day" style="text-decoration: none; margin-left: 10px;">refresh ~</a>
+    <h1>Inspiration for one day</h1>
+    <div>
+        <h3>Breakfast</h3>
+        <div class="item"><span th:text="${breakfast.header}"/></div>
+        <div class="item"><span th:text="${breakfast.description}"/></div>
+        <div th:each="ingredient : ${breakfast.ingredients}">
+            <span th:text="${ingredient.product.name}"/> - <span th:text="${ingredient.quantity}"/>
+        </div>
+    </div>
+    <div>
+        <h3>Lunch</h3>
+        <div class="item"><span th:text="${lunch.header}"/></div>
+        <div class="item"><span th:text="${lunch.description}"/></div>
+        <div th:each="ingredient : ${lunch.ingredients}">
+            <span th:text="${ingredient.product.name}"/> - <span th:text="${ingredient.quantity}"/>
+        </div>
+    </div>
+    <div>
+        <h3>Dinner</h3>
+        <div class="item"><span th:text="${dinner.header}"/></div>
+        <div class="item"><span th:text="${dinner.description}"/></div>
+        <div th:each="ingredient : ${dinner.ingredients}">
+            <span th:text="${ingredient.product.name}"/> - <span th:text="${ingredient.quantity}"/>
+        </div>
+    </div>
+</div>
+</center>
+</body>
+</html>
