@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recording the inspiration</title>
+</head>
+<body>
+<center>
+    <h1>Recording the inspiration</h1>
+    <form method="POST" th:object="${recipe}">
+        <p>Header <input type="text" th:field="*{header}"></p>
+        <p>Description <input type="text" th:field="*{description}"></p>
+        <p><input type="submit" value="Record"></p>
+    </form>
+</center>
+</body>
+</html>

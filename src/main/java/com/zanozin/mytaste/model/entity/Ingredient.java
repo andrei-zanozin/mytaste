@@ -8,7 +8,8 @@ import lombok.Setter;
 @Getter
 public class Ingredient {
 
-    private final Product product;
+    @Setter
+    private Product product;
 
     @Setter
     private Double quantity;
