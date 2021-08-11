@@ -20,25 +20,16 @@
         <h3>Breakfast</h3>
         <div class="item"><span th:text="${breakfast.header}"/></div>
         <div class="item"><span th:text="${breakfast.description}"/></div>
-        <div th:each="ingredient : ${breakfast.ingredients}">
-            <span th:text="${ingredient.product.name}"/> - <span th:text="${ingredient.quantity}"/>
-        </div>
     </div>
     <div>
         <h3>Lunch</h3>
         <div class="item"><span th:text="${lunch.header}"/></div>
         <div class="item"><span th:text="${lunch.description}"/></div>
-        <div th:each="ingredient : ${lunch.ingredients}">
-            <span th:text="${ingredient.product.name}"/> - <span th:text="${ingredient.quantity}"/>
-        </div>
     </div>
     <div>
         <h3>Dinner</h3>
         <div class="item"><span th:text="${dinner.header}"/></div>
         <div class="item"><span th:text="${dinner.description}"/></div>
-        <div th:each="ingredient : ${dinner.ingredients}">
-            <span th:text="${ingredient.product.name}"/> - <span th:text="${ingredient.quantity}"/>
-        </div>
     </div>
 </div>
 </center>

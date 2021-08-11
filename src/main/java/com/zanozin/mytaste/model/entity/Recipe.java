@@ -18,7 +18,4 @@ public class Recipe {
 
     @Setter
     private String description;
-
-    @Setter
-    private Set<Ingredient> ingredients;
 }

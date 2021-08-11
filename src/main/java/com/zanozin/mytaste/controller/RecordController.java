@@ -23,8 +23,8 @@ public class RecordController {
     }
 
     @PostMapping
-    public void recordRecipe(Recipe recipe) {
-        System.out.println(recipe);
+    public String recordRecipe(Recipe recipe) {
+        return "record";
     }
 
 }
