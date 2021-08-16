@@ -8,8 +8,14 @@
 <center>
     <h1>Recording the inspiration</h1>
     <form method="POST" th:object="${recipe}">
-        <p>Header <input type="text" th:field="*{header}"></p>
-        <p>Description <input type="text" th:field="*{description}"></p>
+        <p>Header <input type="text" th:field="*{header}">
+            <span th:if="${#fields.hasErrors('header')}"
+                  th:errors="*{header}">Header validation error.</span>
+        </p>
+        <p>Description <input type="text" th:field="*{description}">
+            <span th:if="${#fields.hasErrors('description')}"
+                  th:errors="*{description}">Description validation error.</span>
+        </p>
         <p><input type="submit" value="Record"></p>
     </form>
 </center>
