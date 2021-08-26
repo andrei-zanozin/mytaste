@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/one_day")
 @RequiredArgsConstructor(onConstructor_ = {@Autowired})
@@ -20,11 +22,11 @@ public class OneDayMenuController {
 
     @GetMapping
     public String getOneDayMenu(Model model) {
-        Recipe anyRecipe = recipeRepository.getAnyRecipe();
+        List<Recipe> oneDayMenu = recipeRepository.getOneDayMenu();
 
-        model.addAttribute("breakfast", anyRecipe);
-        model.addAttribute("lunch", anyRecipe);
-        model.addAttribute("dinner", anyRecipe);
+        model.addAttribute("breakfast", oneDayMenu.get(0));
+        model.addAttribute("lunch", oneDayMenu.get(1));
+        model.addAttribute("dinner", oneDayMenu.get(2));
 
         return "one_day";
     }

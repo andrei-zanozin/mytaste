@@ -1,6 +1,10 @@
 package com.zanozin.mytaste.controller;
 
 import com.zanozin.mytaste.model.entity.Recipe;
+import com.zanozin.mytaste.repostory.RecipeRepository;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -12,7 +16,11 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/record")
+@RequiredArgsConstructor(onConstructor_ = {@Autowired})
 public class RecordController {
+
+    @NonNull
+    private final RecipeRepository recipeRepository;
 
     @GetMapping
     public String getRecordPage(Model model) {
@@ -27,7 +35,12 @@ public class RecordController {
 
     @PostMapping
     public String recordRecipe(@Valid Recipe recipe, Errors errors) {
-        return "record";
+        if (errors.hasErrors()) {
+            return "record";
+        } else {
+            recipeRepository.save(recipe);
+            return "redirect:/record";
+        }
     }
 
 }
