@@ -24,10 +24,14 @@ public class OneDayMenuController {
     public String getOneDayMenu(Model model) {
         List<Recipe> oneDayMenu = recipeRepository.getOneDayMenu();
 
-        model.addAttribute("breakfast", oneDayMenu.get(0));
-        model.addAttribute("lunch", oneDayMenu.get(1));
-        model.addAttribute("dinner", oneDayMenu.get(2));
+        if (oneDayMenu.size() == 3) {
+            model.addAttribute("breakfast", oneDayMenu.get(0));
+            model.addAttribute("lunch", oneDayMenu.get(1));
+            model.addAttribute("dinner", oneDayMenu.get(2));
 
-        return "one_day";
+            return "one_day";
+        } else {
+            return "redirect:/";
+        }
     }
 }
