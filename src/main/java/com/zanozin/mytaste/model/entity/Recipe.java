@@ -1,6 +1,10 @@
 package com.zanozin.mytaste.model.entity;
 
 import lombok.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -8,9 +12,12 @@ import javax.validation.constraints.Size;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class Recipe {
 
     @Setter
+    @Id
+    @GeneratedValue
     private Long id;
 
     @Setter
