@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Taste</title>
+</head>
+<body style="font-family: Garamond; font-style: normal; font-variant: normal;">
+<center>
+    <h1>My Taste</h1>
+</center>
+<br/>
+<center>
+    <a href="/login" style="text-decoration: none;"><- back</a>
+    <form method="POST" th:action="@{/registration}" id="registerForm">
+        <p>Please imagine your login</p>
+        <p><input type="text" name="username" id="username"></p>
+        <p><span>and password</span></p>
+        <p><input type="password" name="password" id="password"></p>
+        <p><span>and confirm password please.</span></p>
+        <p><input type="password" name="confirm" id="confirm"></p>
+        <p><input type="submit" value="That's all"></p>
+    </form>
+</center>
+</body>
+</html>
