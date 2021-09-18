@@ -7,7 +7,9 @@
 <body>
 <div th:insert="~{fragments/common::userPanel}"/>
 <br/>
+<br/>
 <center>
+    <a href="/" style="text-decoration: none; margin-right: 10px;"><- back</a>
     <h1>Recording the inspiration</h1>
     <form method="POST" th:object="${recipe}">
         <p>Header</p>
