@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+
+>
 <head>
     <title>My Taste</title>
 </head>
 <body style="font-family: Garamond; font-style: normal; font-variant: normal;">
-<center>
-    <h1>My Taste</h1>
-    <div>The simple inspiration in cooking.</div>
-</center>
+<div th:insert="~{fragments/common::userPanel}"/>
 <br/>
-<center>
-    <div>Now I want to <a href="/one_day" style="text-decoration: none;">get some inspiration</a> or <a href="/record" style="text-decoration: none;">record it</a>.</div>
-</center>
+<div style="float: center">
+    <center>
+        <h1>My Taste</h1>
+        <div>The simple inspiration in cooking.</div>
+    <br/>
+        <div>Now I want to <a href="/one_day" style="text-decoration: none;">get some inspiration</a> or <a href="/record" style="text-decoration: none;">record it</a>.</div>
+    </center>
+</div>
 </body>
 </html>
