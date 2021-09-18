@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface RecipeRepository extends CrudRepository<Recipe, Long> {
 
-    @Query(value = "SELECT * FROM Recipe ORDER BY RAND() LIMIT 3", nativeQuery = true)
-    List<Recipe> getOneDayMenu();
+    @Query(value = "SELECT * FROM recipe WHERE user_id = ?1 ORDER BY RAND() LIMIT 3", nativeQuery = true)
+    List<Recipe> getOneDayMenu(Long userId);
 }
